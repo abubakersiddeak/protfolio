@@ -5,14 +5,7 @@ import TypingEffect from "./TypingEffect";
 const Introduction = () => {
   return (
     <motion.div
-      drag
-      dragElastic={0.2}
       initial={{ x: 0, y: 0, opacity: 1 }} // শুরুতে একই জায়গায় থাকবে
-      animate={{
-        x: 300,
-        y: -30,
-        opacity: 1,
-      }}
       transition={{
         delay: 30,
         duration: 3,

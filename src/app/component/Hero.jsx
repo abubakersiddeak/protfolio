@@ -95,12 +95,8 @@ const Hero = () => {
         {/* intoduction div end */}
         <div className="col-span-full row-start-6 justify-center items-center flex">
           <motion.button
-            drag
-            dragElastic={0.2}
             initial={{ x: 0, y: 0, opacity: 0.7 }}
             animate={{
-              x: 300,
-              y: -45,
               opacity: 1,
             }}
             transition={{
