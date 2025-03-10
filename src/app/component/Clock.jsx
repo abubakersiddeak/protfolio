@@ -24,9 +24,6 @@ const Clock = () => {
     day: "numeric",
   });
 
-  console.log("Formatted Time:", formattedTime); // Debugging
-  console.log("Formatted Date:", formattedDate); // Debugging
-
   return (
     <div className="flex flex-col p-4 text-black rounded-lg shadow-lg">
       <h1 className="text-4xl font-bold">{formattedTime}</h1>

@@ -1,32 +1,11 @@
 import React from "react";
 import { motion } from "motion/react";
 import Image from "next/image";
-import { useState, useEffect } from "react";
+import TypingEffect from "./TypingEffect";
+
 const Introduction = () => {
-  // for text animation start
-  const text =
-    "A full-stack web developer with a passion for creating innovative web applications. I specialize in both front-end and back-end development, delivering responsive and user-friendly websites. I work remotely from Bangladesh.";
-  const [displayText, setDisplayText] = useState("");
-  useEffect(() => {
-    let i = 0;
-    const interval = setInterval(() => {
-      if (i < text.length) {
-        setDisplayText((prev) => prev + text[i]);
-        i++;
-      } else {
-        clearInterval(interval); // Ensure interval is cleared after the loop ends
-      }
-    }, 100);
-
-    return () => clearInterval(interval); // Clear the interval when the component unmounts
-  }, []);
-  // for text animation end
-
-  const Text = displayText.slice(0, -9); //my ninja technique for remove undefine from output
   return (
     <motion.div
-      drag
-      dragElastic={0.2}
       initial={{ x: 0, y: 0, opacity: 1 }} // শুরুতে একই জায়গায় থাকবে
       animate={{
         x: 300,
@@ -86,14 +65,10 @@ const Introduction = () => {
           Abubakar Siddik Zisan
         </motion.p>
 
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-          className="text-center text-[9px] md:text-[13px] lg:text-[15px] xl:text-[17px]"
-        >
-          {Text}
-        </motion.p>
+        <TypingEffect
+          text="A  full-stack web developer with a passion for creating innovative web applications. I specialize in both front-end and back-end development, delivering responsive and user-friendly websites. I work remotely from Bangladesh."
+          speed={100}
+        />
       </div>
     </motion.div>
   );
