@@ -2,10 +2,11 @@ import React from "react";
 import { motion } from "motion/react";
 import Image from "next/image";
 import TypingEffect from "./TypingEffect";
-
 const Introduction = () => {
   return (
     <motion.div
+      drag
+      dragElastic={0.2}
       initial={{ x: 0, y: 0, opacity: 1 }} // শুরুতে একই জায়গায় থাকবে
       animate={{
         x: 300,
@@ -20,7 +21,7 @@ const Introduction = () => {
       className=" p-2  rounded-2xl  col-start-2 row-span-4 col-span-4 md:col-start-3 md:col-span-2 md:row-span-4 md:mt-6 grid grid-cols-6 grid-rows-6 "
     >
       <motion.div
-        animate={{ y: [0, -30, 0] }}
+        animate={{ y: [0, 0] }}
         transition={{ duration: 3, ease: "easeInOut" }}
         className="col-span-6   flex justify-center "
       >

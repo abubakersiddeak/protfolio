@@ -5,11 +5,9 @@ import { LuFacebook } from "react-icons/lu";
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
-
 import { CiMenuBurger } from "react-icons/ci";
 import { useState } from "react";
 import { FaDownload } from "react-icons/fa6";
-
 import InformationBoad from "./InformationBoad";
 import Introduction from "./Introduction";
 
@@ -91,12 +89,14 @@ const Hero = () => {
           {/* icon end */}
         </div>
         {/* information boad start */}
-        <InformationBoad />
+        {/* <InformationBoad /> */}
         {/* intoduction div start */}
         <Introduction />
         {/* intoduction div end */}
         <div className="col-span-full row-start-6 justify-center items-center flex">
           <motion.button
+            drag
+            dragElastic={0.2}
             initial={{ x: 0, y: 0, opacity: 0.7 }}
             animate={{
               x: 300,
