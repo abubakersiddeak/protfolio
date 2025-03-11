@@ -34,20 +34,6 @@ const Introduction = () => {
           />
         </motion.div>
       </motion.div>
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 3 }}
-        className="relative hidden 2xl:block col-start-2 col-span-4 row-start-4 mt-[-50px] xl:"
-      >
-        <Image
-          src={"/roaf.png"}
-          alt="roaf"
-          style={{ objectFit: "cover" }}
-          fill
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-        />
-      </motion.div>
 
       <div className=" mt-9 md:mt-[-10px] xl:mt-[0px] row-start-4 md:row-start-4 col-span-full row-span-3 flex flex-col items-center justify-center">
         <motion.p
@@ -61,7 +47,7 @@ const Introduction = () => {
 
         <TypingEffect
           text="A  full-stack web developer with a passion for creating innovative web applications. I specialize in both front-end and back-end development, delivering responsive and user-friendly websites. I work remotely from Bangladesh."
-          speed={100}
+          speed={20}
         />
       </div>
     </motion.div>

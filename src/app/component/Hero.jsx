@@ -8,10 +8,11 @@ import { FaInstagram } from "react-icons/fa";
 import { CiMenuBurger } from "react-icons/ci";
 import { useState } from "react";
 import { FaDownload } from "react-icons/fa6";
-import InformationBoad from "./InformationBoad";
 import Introduction from "./Introduction";
+import Link from "next/link";
 
 const Hero = () => {
+  const [copied, setCopied] = useState(false);
   const [show, setShow] = useState(false);
   const handleclick = (e) => {
     e.preventDefault();
@@ -20,6 +21,15 @@ const Hero = () => {
     } else {
       setShow(false);
     }
+  };
+
+  const email = "abubakersiddeak@gmail.com";
+  const handleCopy = (e) => {
+    e.preventDefault();
+    navigator.clipboard.writeText(email);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+    console.log("hello");
   };
   return (
     <>
@@ -30,12 +40,20 @@ const Hero = () => {
               <span className="text-[10px] sm:text-sm ">
                 abubakersiddeak@gmail.com
               </span>
-              <span className="border p-3 rounded-3xl bg-white font-bold pl-4 pr-4 ml-2 text-xs sm:text-sm">
-                Copy
-              </span>
+              <button
+                onClick={handleCopy}
+                className="border p-3 rounded-3xl bg-white font-bold pl-4 pr-4 ml-2 text-xs sm:text-sm"
+              >
+                {copied ? "Copied!" : "Copy"}
+              </button>
             </div>
             <div className="border relative mt-2 text-center p-2 font-bold  rounded-3xl bg-white flex justify-center ">
-              <span>Resume</span>
+              <a
+                href="/AbubakarSiddikZisan.png"
+                download="AbubakarSiddikZisan.png"
+              >
+                Resume
+              </a>
               <span className="pl-2">
                 <FaDownload />
               </span>
@@ -56,14 +74,19 @@ const Hero = () => {
               <span className="text-xs sm:text-sm ">
                 abubakersiddeak@gmail.com{" "}
               </span>
-              <span className="border hover:bg-blue-300 p-3 rounded-3xl bg-white font-bold pl-4 pr-4 ml-2 text-xs sm:text-sm">
-                <button>Copy</button>
+              <span className="cursor-pointer border hover:bg-gray-400 p-3 rounded-3xl bg-white font-bold pl-4 pr-4 ml-2 text-xs sm:text-sm">
+                <button onClick={handleCopy}>
+                  {copied ? "Copied!" : "Copy"}
+                </button>
               </span>
             </div>
-            <div className="border hover:bg-blue-300 relative mt-11 ml-3 p-2 font-bold pl-7 pr-7 rounded-3xl bg-white flex">
-              <span>
+            <div className="cursor-pointer border hover:bg-gray-400 relative mt-11 ml-3 p-2 font-bold pl-7 pr-7 rounded-3xl bg-white flex">
+              <a
+                href="/AbubakarSiddikZisan.png"
+                download="AbubakarSiddikZisan.png"
+              >
                 <button>Resume</button>
-              </span>
+              </a>
               <span className="pl-2">
                 <FaDownload />
               </span>
@@ -73,18 +96,30 @@ const Hero = () => {
           {/* icon start */}
 
           <div className="flex items-center col-start-10 lg:col-start-11 border-black mt-6 lg:mt-11 col-span-3 lg:col-span-2 mr-14 justify-around">
-            <div className="lg:text-3xl">
+            <Link
+              href="https://www.facebook.com/abubakar.siddeak/"
+              className="lg:text-3xl"
+            >
               <LuFacebook />
-            </div>
-            <div className="lg:text-3xl">
+            </Link>
+            <Link
+              href="https://github.com/abubakersiddeak"
+              className="lg:text-3xl"
+            >
               <FaGithub />
-            </div>
-            <div className="lg:text-3xl">
+            </Link>
+            <Link
+              href="https://www.linkedin.com/in/abubaker-siddik-zisan/"
+              className="lg:text-3xl"
+            >
               <FaLinkedinIn />
-            </div>
-            <div className="lg:text-3xl">
+            </Link>
+            <Link
+              href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.instagram.com%2Fabubakarsiddik40%3Figsh%3DOXpoam1sZjRqYnBv%26fbclid%3DIwZXh0bgNhZW0CMTAAAR3nfcYHt66aOW0kMZ9Io1OExI5qeMIqIUmCZSkfObz7q_3xKMlqGPWyuOs_aem_DtdzumUzK432BySEc1MWjA&h=AT1SmBW2FC6su91n_9ebGTir_Xv05BC29FpdhCIiqfEH69jpwejLaDZyUh6dlIWwrlxzTSs-WGQua64B2YQ0Aztojmh-4bAAfYUa7vJnv8JfBJCCXLV1zW0VEjH-Tw"
+              className="lg:text-3xl"
+            >
               <FaInstagram />
-            </div>
+            </Link>
           </div>
           {/* icon end */}
         </div>
@@ -106,7 +141,7 @@ const Hero = () => {
             }}
             className="border p-3 rounded-3xl bg-black text-white font-bold hover:bg-slate-800"
           >
-            Connect Me
+            <Link href="/contactme">Connect Me</Link>
           </motion.button>
         </div>
       </div>

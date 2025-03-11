@@ -17,14 +17,9 @@ const Icon = () => {
     <div className="bg-white z-20 mt-[-90px] h-[30vh] xl:h-[40vh] 2xl:h-[30vh] relative rounded-b-[40px] md:rounded-b-[80px] grid grid-cols-12 grid-rows-4">
       {/* icon start */}
       <motion.div
-        initial={{ x: "-100vw", opacity: 1 }} // শুরুতে বাঁয়ে থাকবে
-        animate={{ x: 0, opacity: 1 }} // ৩ সেকেন্ডে মাঝখানে আসবে
-        exit={{ x: "100vw", opacity: 1 }} // ৩ সেকেন্ডে ডান দিকে চলে যাবে
-        transition={{
-          times: [0, 0.3, 0.8, 1], // সময় নির্ধারণ (মোট ১৬ সেকেন্ড)
-          duration: 16, // মোট সময় ১৬ সেকেন্ড
-          ease: "easeInOut",
-        }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }} // ৩ সেকেন্ডে মাঝখানে আসবে
+        transition={{ duration: 3 }}
         className="row-start-3 mt-7 col-span-full justify-center items-center flex "
       >
         <div

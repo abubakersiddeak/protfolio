@@ -58,11 +58,9 @@ const AboutMe = () => {
             {
               title: "Skills",
               items: [
-                "🌐 Frontend: Next.js, React.js, Tailwind CSS, Framer Motion",
-                "💻 Full-Stack Development (Node.js, Express.js)",
-                "🎨 UI/UX & Tailwind CSS (GIMP, Photoshop, Illustrator)",
-                "📊 MongoDB, Mongoose, API Development",
-                "Git & GitHub",
+                "Frontend: Next.js, React.js, Tailwind CSS, Framer Motion",
+                "Backend Development (Node.js, Express.js,MongoDB)",
+                "UI/UX & Tailwind CSS (GIMP, Photoshop, Illustrator)",
               ],
               delay: 0.2,
             },
@@ -77,11 +75,7 @@ const AboutMe = () => {
             },
             {
               title: "Interests",
-              items: [
-                "Strong passion for cybersecurity and ethical hacking.",
-                "🎮 Gaming & Competitive Coding",
-                "📸 Photography & Video Editing",
-              ],
+              items: ["Strong passion for cybersecurity and ethical hacking."],
               delay: 0.6,
             },
           ].map((section, index) => (
@@ -120,7 +114,7 @@ const AboutMe = () => {
             I’m always open to new projects and collaborations.
           </p>
           <a
-            href="/contact"
+            href="/contactme"
             className="mt-6 inline-block bg-black text-white px-6 py-3 rounded-full text-lg font-semibold shadow-md hover:bg-gray-700 transition duration-300"
           >
             Contact Me
