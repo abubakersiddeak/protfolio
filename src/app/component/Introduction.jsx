@@ -19,12 +19,7 @@ const Introduction = () => {
         className="col-span-6   flex justify-center "
       >
         {" "}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 2 }}
-          className="rounded-full border-4 border-gray-300 col-start-3 relative w-40 h-40 overflow-hidden xl:mt-[-40px] 2xl:mt-[5px]"
-        >
+        <div className="rounded-full border-4 border-gray-300 col-start-3 relative w-40 h-40 overflow-hidden xl:mt-[-40px] 2xl:mt-[5px]">
           <Image
             src={"/slkdjgh.png"}
             alt="myimg"
@@ -32,12 +27,12 @@ const Introduction = () => {
             fill
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
-        </motion.div>
+        </div>
       </motion.div>
 
       <div className=" mt-9 md:mt-[-10px] xl:mt-[0px] row-start-4 md:row-start-4 col-span-full row-span-3 flex flex-col items-center justify-center">
         <motion.p
-          initial={{ y: -50, opacity: 0 }}
+          initial={{ y: -50, opacity: 1 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 3 }}
           className="font-bold text-xs md:text-xl lg:text-3xl"

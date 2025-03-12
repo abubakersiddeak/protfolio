@@ -1,5 +1,4 @@
 "use client";
-import { motion } from "motion/react";
 import React from "react";
 import { LuFacebook } from "react-icons/lu";
 import { FaGithub } from "react-icons/fa";
@@ -10,6 +9,7 @@ import { useState } from "react";
 import { FaDownload } from "react-icons/fa6";
 import Introduction from "./Introduction";
 import Link from "next/link";
+import LinkButton from "./LinkButton";
 
 const Hero = () => {
   const [copied, setCopied] = useState(false);
@@ -47,7 +47,7 @@ const Hero = () => {
                 {copied ? "Copied!" : "Copy"}
               </button>
             </div>
-            <div className="border relative mt-2 text-center p-2 font-bold  rounded-3xl bg-white flex justify-center ">
+            <div className="border relative mt-2 text-center p-2 font-bold  rounded-3xl bg-white flex justify-center hover:shadow-blue-400 hover:shadow-md">
               <a
                 href="/AbubakarSiddikZisan.png"
                 download="AbubakarSiddikZisan.png"
@@ -74,13 +74,13 @@ const Hero = () => {
               <span className="text-xs sm:text-sm ">
                 abubakersiddeak@gmail.com{" "}
               </span>
-              <span className="cursor-pointer border hover:bg-gray-400 p-3 rounded-3xl bg-white font-bold pl-4 pr-4 ml-2 text-xs sm:text-sm">
+              <span className="cursor-pointer border hover:bg-gray-400 p-3 rounded-3xl bg-white font-bold pl-4 pr-4 ml-2 text-xs sm:text-sm hover:shadow-blue-400 hover:shadow-md">
                 <button onClick={handleCopy}>
                   {copied ? "Copied!" : "Copy"}
                 </button>
               </span>
             </div>
-            <div className="cursor-pointer border hover:bg-gray-400 relative mt-11 ml-3 p-2 font-bold pl-7 pr-7 rounded-3xl bg-white flex">
+            <div className="cursor-pointer border hover:bg-gray-400 relative mt-11 ml-3 p-2 font-bold pl-7 pr-7 rounded-3xl bg-white flex hover:shadow-blue-400 hover:shadow-md">
               <a
                 href="/AbubakarSiddikZisan.png"
                 download="AbubakarSiddikZisan.png"
@@ -95,28 +95,28 @@ const Hero = () => {
           {/* gmail end */}
           {/* icon start */}
 
-          <div className="flex items-center col-start-10 lg:col-start-11 border-black mt-6 lg:mt-11 col-span-3 lg:col-span-2 mr-14 justify-around">
+          <div className="flex items-center col-start-10 lg:col-start-11 border-black mt-6 lg:mt-11 col-span-3 lg:col-span-2 mr-14 justify-around ">
             <Link
               href="https://www.facebook.com/abubakar.siddeak/"
-              className="lg:text-3xl"
+              className="lg:text-3xl hover:shadow-blue-400 hover:shadow-md "
             >
               <LuFacebook />
             </Link>
             <Link
               href="https://github.com/abubakersiddeak"
-              className="lg:text-3xl"
+              className="lg:text-3xl hover:shadow-blue-400 hover:shadow-md"
             >
               <FaGithub />
             </Link>
             <Link
               href="https://www.linkedin.com/in/abubaker-siddik-zisan/"
-              className="lg:text-3xl"
+              className="lg:text-3xl hover:shadow-blue-400 hover:shadow-md"
             >
               <FaLinkedinIn />
             </Link>
             <Link
               href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.instagram.com%2Fabubakarsiddik40%3Figsh%3DOXpoam1sZjRqYnBv%26fbclid%3DIwZXh0bgNhZW0CMTAAAR3nfcYHt66aOW0kMZ9Io1OExI5qeMIqIUmCZSkfObz7q_3xKMlqGPWyuOs_aem_DtdzumUzK432BySEc1MWjA&h=AT1SmBW2FC6su91n_9ebGTir_Xv05BC29FpdhCIiqfEH69jpwejLaDZyUh6dlIWwrlxzTSs-WGQua64B2YQ0Aztojmh-4bAAfYUa7vJnv8JfBJCCXLV1zW0VEjH-Tw"
-              className="lg:text-3xl"
+              className="lg:text-3xl hover:shadow-blue-400 hover:shadow-md"
             >
               <FaInstagram />
             </Link>
@@ -129,20 +129,13 @@ const Hero = () => {
         <Introduction />
         {/* intoduction div end */}
         <div className="col-span-full row-start-6 justify-center items-center flex">
-          <motion.button
-            initial={{ x: 0, y: 0, opacity: 0.7 }}
-            animate={{
-              opacity: 1,
-            }}
-            transition={{
-              delay: 30,
-              duration: 3,
-              ease: "easeInOut",
-            }}
-            className="border p-3 rounded-3xl bg-black text-white font-bold hover:bg-slate-800"
-          >
-            <Link href="/contactme">Connect Me</Link>
-          </motion.button>
+          <LinkButton
+            className={
+              "mt-6 inline-block bg-gradient-to-r from-green-500 to-blue-500 text-white px-6 py-3 rounded-full text-lg font-semibold shadow-lg hover:scale-105 transition duration-300"
+            }
+            href={"/contactme"}
+            text={"Connect Me"}
+          />
         </div>
       </div>
     </>
