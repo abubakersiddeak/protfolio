@@ -61,10 +61,9 @@ export default function ContactForm() {
             type="submit"
             className="w-full p-3 bg-cyan-500 text-black font-bold rounded-lg hover:bg-cyan-600 transition-all shadow-lg shadow-cyan-500/50"
           >
-            {submitted ? "Message Sent! 🎉" : "Send Message"}
+            {submitted ? "Message Sent!" : "Send Message"}
           </button>
         </form>
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-purple-500/10 blur-3xl opacity-40 z-0"></div>
       </div>
     </div>
   );

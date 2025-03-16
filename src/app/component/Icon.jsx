@@ -8,80 +8,73 @@ import { SiMongodb, SiAdobephotoshop, SiGimp } from "react-icons/si";
 import SkillProgress from "./SkillProgress";
 
 const Icon = () => {
-  const style = "w-3 h-3 md:w-6 md:h-6 lg:w-8 lg:h-8 drop-shadow-lg";
+  const style = "w-3 h-3 md:w-8 md:h-8 drop-shadow-[0_0_10px_#00eaff]";
 
   const skills = [
     {
-      icon: <SiGimp className={`${style} text-black`} />,
+      icon: <SiGimp className={`${style} text-white`} />,
       percentage: 70,
-      color: "black",
+      color: "#00eaff",
     },
     {
-      icon: <SiAdobephotoshop className={`${style} text-blue-600`} />,
+      icon: <SiAdobephotoshop className={`${style} text-blue-500`} />,
       percentage: 65,
-      color: "blue",
+      color: "#007ACC",
     },
     {
       icon: <FaHtml5 className={`${style} text-orange-400`} />,
       percentage: 90,
-      color: "orange",
+      color: "#FF4500",
     },
     {
       icon: <FaCss3 className={`${style} text-blue-400`} />,
       percentage: 90,
-      color: "blue",
+      color: "#008CFF",
     },
     {
-      icon: <RiTailwindCssFill className={`${style} text-blue-600`} />,
+      icon: <RiTailwindCssFill className={`${style} text-cyan-400`} />,
       percentage: 82,
-      color: "blue",
+      color: "#06B6D4",
     },
     {
       icon: <IoLogoJavascript className={`${style} text-yellow-400`} />,
       percentage: 73,
-      color: "yellow",
+      color: "#F7DF1E",
     },
     {
-      icon: <FaReact className={`${style} text-blue-500`} />,
+      icon: <FaReact className={`${style} text-blue-500 animate-spin`} />,
       percentage: 70,
-      color: "blue",
+      color: "#61DAFB",
     },
     {
-      icon: <FaNodeJs className={`${style} text-green-700`} />,
+      icon: <FaNodeJs className={`${style} text-green-600`} />,
       percentage: 70,
-      color: "green",
+      color: "#68A063",
     },
     {
-      icon: <RiNextjsFill className={`${style} text-black`} />,
+      icon: <RiNextjsFill className={`${style} text-gray-300`} />,
       percentage: 80,
-      color: "black",
+      color: "#00eaff",
     },
     {
-      icon: <SiMongodb className={`${style} text-green-600`} />,
+      icon: <SiMongodb className={`${style} text-green-500`} />,
       percentage: 65,
-      color: "green",
+      color: "#4DB33D",
     },
   ];
 
   return (
-    <div className="bg-white z-20 mt-[-90px] relative rounded-b-[40px] md:rounded-b-[80px] p-6 shadow-xl backdrop-blur-lg">
+    <div className="relative z-20 p-8 rounded-2xl  border-b-cyan-500 shadow-[0_0_0px_#00eaff] backdrop-blur-lg">
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 2 }}
-        className="flex flex-wrap justify-center gap-4 xl:gap-8 mt-24 md:mt-26 sm:mt-24"
+        className="flex flex-wrap justify-center gap-6"
       >
         {skills.map((skill, index) => (
           <motion.div
-            animate={{ y: [0, -20, 0] }}
-            transition={{
-              duration: 5,
-              repeat: Infinity,
-              ease: "easeInOut",
-              repeatDelay: 3,
-            }}
             key={index}
-            className="bg-gray-50 shadow-2xl rounded-xl flex flex-col items-center justify-center hover:scale-110 transition-all duration-300 border border-gray-200 backdrop-blur-lg hover:shadow-blue-400 hover:shadow-md h-10 w-10 2xl:h-28 2xl:w-28 xl:h-24 xl:w-24 md:h-20 md:w-20 sm:h-15 sm:w-15"
+            className="bg-black border border-cyan-500 rounded-xl flex flex-col items-center justify-center hover:scale-110 transition-all duration-300 hover:shadow-[0_0_30px_#00eaff] h-10 w-10 md:h-20 md:w-20 lg:h-24 lg:w-24"
           >
             <SkillProgress
               percentage={skill.percentage}
