@@ -2,13 +2,12 @@
 import Image from "next/image";
 import React from "react";
 import { motion } from "framer-motion";
-import LinkButton from "./LinkButton";
 
 const AboutMe = () => {
   return (
-    <div className="relative min-h-screen bg-gray-50 bg-[url('/sincerely-media-FPrniQ84dEk-unsplash.jpg')] bg-cover bg-center rounded-b-[40px] md:rounded-b-[80px] mt-[-80px]">
+    <div className="relative min-h-screen bg-[#111827] text-[#E2E8F0]  mt-[-80px]">
       {/* Background Overlay */}
-      <div className="absolute inset-0 bg-black/50 backdrop-blur-[3px] rounded-b-[40px] md:rounded-b-[80px]"></div>
+      <div className="absolute inset-0 bg-black/30 backdrop-blur-[3px] rounded-b-[40px] md:rounded-b-[80px]"></div>
 
       {/* About Content */}
       <section className="relative py-20 px-6 max-w-6xl mx-auto text-white">
@@ -175,29 +174,6 @@ const AboutMe = () => {
             </motion.div>
           ))}
         </div>
-
-        {/* Contact & CTA */}
-        <motion.div
-          className="mt-16 text-center"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.8 }}
-        >
-          <h3 className="text-2xl font-bold text-white">
-            Let’s Work Together!
-          </h3>
-          <p className="text-lg text-gray-300 mt-2">
-            I’m always open to new projects and collaborations.
-          </p>
-
-          <LinkButton
-            text={"Contact Me"}
-            href={"/contactme"}
-            className={
-              "mt-6 inline-block bg-gradient-to-r from-green-500 to-blue-500 text-white px-6 py-3 rounded-full text-lg font-semibold shadow-lg hover:scale-105 transition duration-300"
-            }
-          />
-        </motion.div>
       </section>
     </div>
   );

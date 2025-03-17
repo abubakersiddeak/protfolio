@@ -32,8 +32,8 @@ export default function Navbar() {
       {/* Logo */}
 
       <div className="hidden   relative md:flex items-center justify-center ">
-        <div className=" p-3  hidden lg:block rounded-3xl bg-slate-100   pr-0 ">
-          <span className="text-xs sm:text-sm ">
+        <div className=" p-3  hidden lg:block rounded-3xl bg-white/5 backdrop-blur-2xl shadow-[0px_0px_20px_rgba(0,255,255,0.4)]   pr-0 ">
+          <span className="text-xs sm:text-sm bg-gradient-to-r from-pink-300 to-yellow-400 text-transparent bg-clip-text">
             abubakersiddeak@gmail.com{" "}
           </span>
           <span className="cursor-pointer  hover:bg-gray-400 p-3 rounded-3xl bg-white font-bold pl-4 pr-4 ml-2 text-xs sm:text-sm hover:shadow-blue-400 hover:shadow-md">
@@ -52,7 +52,7 @@ export default function Navbar() {
       </div>
 
       {/* Desktop Menu */}
-      <ul className="hidden md:flex space-x-9 font-medium">
+      <ul className="hidden md:flex space-x-9 font-medium bg-gradient-to-r from-pink-300 to-yellow-400 text-transparent bg-clip-text">
         <li className="hover:text-purple-600 transition">
           <a className=" border-b-3 border-b-fuchsia-600" href="/">
             Home
@@ -64,7 +64,7 @@ export default function Navbar() {
           </a>
         </li>
         <li className="hover:text-purple-600 transition">
-          <a className=" border-b-3 border-b-fuchsia-600" href="#">
+          <a className=" border-b-3 border-b-fuchsia-600" href="/Myservice">
             Service
           </a>
         </li>
@@ -106,9 +106,13 @@ export default function Navbar() {
       <div className="flex items-center space-x-3 ">
         <button
           onClick={() => setDarkMode(!darkMode)}
-          className="p-2 rounded-lg"
+          className="p-2 rounded-lg "
         >
-          {darkMode ? <Sun size={20} /> : <Moon size={20} />}
+          {darkMode ? (
+            <Sun size={20} className="text-amber-300" />
+          ) : (
+            <Moon size={20} className="text-gray-300" />
+          )}
         </button>
         <button onClick={() => setIsOpen(!isOpen)} className="md:hidden">
           {isOpen ? <X size={28} /> : <Menu size={28} />}
@@ -125,7 +129,7 @@ export default function Navbar() {
             <a href="/about">About</a>
           </li>
           <li className="hover:text-purple-600 transition">
-            <a href="#">Service</a>
+            <a href="/Myservice">Service</a>
           </li>
           <li className="hover:text-purple-600 transition">
             <a href="#">Portfolio</a>

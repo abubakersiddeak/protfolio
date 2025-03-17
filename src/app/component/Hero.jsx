@@ -9,11 +9,8 @@ const Hero = () => {
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 1 }}
-      className="relative bg-gray-900 bg-[url('/sincerely-media-FPrniQ84dEk-unsplash.jpg')] bg-cover bg-center rounded-2xl z-50 h-[70vh] xl:h-[80vh] 2xl:h-[80vh] md:h-[70vh] grid grid-cols-6 grid-rows-6 overflow-hidden shadow-[0_0_20px_#00eaff] border border-cyan-500"
+      className="relative bg-[#111827] from-pink-300 to-yellow-400 rounded-2xl z-50 h-[70vh] xl:h-[80vh] 2xl:h-[80vh] md:h-[70vh] grid grid-cols-6 grid-rows-6 overflow-hidden shadow-[0_0_20px_#00eaff] border border-cyan-500"
     >
-      {/* Glassmorphism Overlay */}
-      <div className="absolute inset-0 bg-black/30 backdrop-blur-[6px]"></div>
-
       {/* Navbar with hover effect */}
       <motion.div
         initial={{ opacity: 0, y: -10 }}
