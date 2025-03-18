@@ -11,7 +11,7 @@ import Footer from "./component/Footer";
 export default function Home() {
   const [darkMode, setDarkMode] = useState(true);
   return (
-    <div className={` ${darkMode ? "bg-white" : "bg-black"}`}>
+    <div className={` ${darkMode ? "bg-white" : "bg-black rounded-2xl"}`}>
       <Hero darkMode={darkMode} setDarkMode={setDarkMode} />
 
       <Icon />
