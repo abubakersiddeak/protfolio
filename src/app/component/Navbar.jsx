@@ -9,9 +9,8 @@ import { FaLinkedinIn } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import Link from "next/link";
 
-export default function Navbar() {
+export default function Navbar({ darkMode, setDarkMode }) {
   const [isOpen, setIsOpen] = useState(false);
-  const [darkMode, setDarkMode] = useState(false);
   const [copied, setCopied] = useState(false);
 
   const email = "abubakersiddeak@gmail.com";
@@ -58,27 +57,27 @@ export default function Navbar() {
       {/* Desktop Menu */}
       <ul className="hidden md:flex space-x-9 font-medium bg-gradient-to-r from-pink-300 to-yellow-400 text-transparent bg-clip-text">
         <li className="hover:text-purple-600 transition">
-          <a className=" border-b-3 border-b-fuchsia-600" href="/">
+          <a className=" border-b-3 border-b-cyan-500" href="/">
             Home
           </a>
         </li>
         <li className="hover:text-purple-600 transition">
-          <a className=" border-b-3 border-b-fuchsia-600" href="/about">
+          <a className=" border-b-3 border-b-cyan-500" href="/about">
             About
           </a>
         </li>
         <li className="hover:text-purple-600 transition">
-          <a className=" border-b-3 border-b-fuchsia-600" href="/Myservice">
+          <a className=" border-b-3 border-b-cyan-500" href="/Myservice">
             Service
           </a>
         </li>
         <li className="hover:text-purple-600 transition">
-          <a className=" border-b-3 border-b-fuchsia-600" href="/project">
+          <a className=" border-b-3 border-b-cyan-500" href="/project">
             Portfolio
           </a>
         </li>
         <li className="hover:text-purple-600 transition">
-          <a className=" border-b-3 border-b-fuchsia-600" href="/blog">
+          <a className=" border-b-3 border-b-cyan-500" href="/blog">
             Blog
           </a>
         </li>
@@ -118,9 +117,9 @@ export default function Navbar() {
           className="p-2 rounded-lg "
         >
           {darkMode ? (
-            <Sun size={20} className="text-amber-300" />
-          ) : (
             <Moon size={20} className="text-gray-300" />
+          ) : (
+            <Sun size={20} className="text-amber-300" />
           )}
         </button>
         <button
@@ -133,7 +132,7 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <ul className="z-50 absolute top-16 right-7 md:hidden flex flex-col items-center space-y-3 py-6 text-lg font-medium text-green-400">
+        <ul className="z-50 absolute top-16 right-7 md:hidden flex flex-col items-center space-y-3 py-6 text-lg font-medium text-green-400 p-2 rounded-3xl bg-gray-600">
           <li className="hover:text-purple-600 transition">
             <a href="/">Home</a>
           </li>

@@ -25,7 +25,7 @@ export default function Hero() {
             href="https://github.com/abubakersiddeak"
             className="lg:text-3xl hover:shadow-blue-400 hover:shadow-md"
           >
-            <FaGithub className="h-6 w-6 lg:h-9 lg:w-9" />
+            <FaGithub className="h-6 w-6 lg:h-9 lg:w-9 text-white" />
           </Link>
           <Link
             href="https://www.linkedin.com/in/abubaker-siddik-zisan/"
@@ -52,7 +52,9 @@ export default function Hero() {
             </h2>
             <h1 className="text-2xl md:text-4xl font-extrabold leading-tight mt-2 text-green-400">
               A{" "}
-              <span className="text-purple-600 drop-shadow-md">Full-Stack</span>{" "}
+              <span className="text-cyan-500 drop-shadow-md">
+                Front-end Developer
+              </span>{" "}
               <br />
               Web Developer.
             </h1>
@@ -66,7 +68,7 @@ export default function Hero() {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-purple-600 text-white px-2 md:px-6 py-1  md:py-3 rounded-lg font-semibold shadow-lg hover:bg-purple-700 transition"
+                className="bg-cyan-500 text-white px-2 md:px-6 py-1  md:py-3 rounded-lg font-semibold shadow-lg hover:bg-purple-700 transition"
               >
                 <a href="/project">My Projects →</a>
               </motion.button>
@@ -74,7 +76,7 @@ export default function Hero() {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="border-2 border-purple-600 text-purple-600 px-2 md:px-6 py-1 md:py-3 rounded-lg font-semibold shadow-lg hover:bg-purple-600 hover:text-white transition"
+                className="border-2 border-cyan-500 text-cyan-500 px-2 md:px-6 py-1 md:py-3 rounded-lg font-semibold shadow-lg hover:bg-cyan-500 hover:text-white transition"
               >
                 <Link href="/contactme">Quick Contact</Link>
               </motion.button>

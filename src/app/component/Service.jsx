@@ -7,7 +7,7 @@ const services = [
   {
     title: "Web Development",
     description:
-      "Modern, fast, and responsive websites with React ,Framer-motion, NextJs, NodeJs,ExpressJs,MongoDB technologies.",
+      "Modern, fast, and responsive websites with React ,Framer-motion, NextJs, NodeJs, ExpressJs, MongoDB technologies.",
     icon: <FaCode className="text-4xl text-blue-500" />,
   },
   {

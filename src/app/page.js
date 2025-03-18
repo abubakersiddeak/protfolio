@@ -1,7 +1,7 @@
 "use client";
 import Hero from "./component/Hero";
 import Icon from "./component/Icon";
-
+import { useState } from "react";
 import AboutMe from "./component/AboutMe";
 import Service from "./component/Service";
 import Project from "./component/Project";
@@ -9,9 +9,10 @@ import Blog from "./component/Blog";
 import Footer from "./component/Footer";
 
 export default function Home() {
+  const [darkMode, setDarkMode] = useState(true);
   return (
-    <>
-      <Hero />
+    <div className={` ${darkMode ? "bg-white" : "bg-black"}`}>
+      <Hero darkMode={darkMode} setDarkMode={setDarkMode} />
 
       <Icon />
       <AboutMe />
@@ -19,6 +20,6 @@ export default function Home() {
       <Project />
       <Blog />
       <Footer />
-    </>
+    </div>
   );
 }
