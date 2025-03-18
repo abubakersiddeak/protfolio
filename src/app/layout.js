@@ -23,7 +23,7 @@ export const metadata = {
   description: "This is a futuristic web experience built with Next.js",
   keywords: "Next.js, Tailwind, Futuristic UI, React",
   openGraph: {
-    title: "My Futuristic Website",
+    title: "My protfolio Website",
     description: "Experience the future of web design",
     url: "https://effervescent-lokum-36bfa7.netlify.app/",
     images: [

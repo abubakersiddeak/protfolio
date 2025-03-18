@@ -37,18 +37,22 @@ export default function Navbar() {
             abubakersiddeak@gmail.com{" "}
           </span>
           <span className="cursor-pointer  hover:bg-gray-400 p-3 rounded-3xl bg-white font-bold pl-4 pr-4 ml-2 text-xs sm:text-sm hover:shadow-blue-400 hover:shadow-md">
-            <button onClick={handleCopy}>{copied ? "Copied!" : "Copy"}</button>
+            <button className="cursor-pointer" onClick={handleCopy}>
+              {copied ? "Copied!" : "Copy"}
+            </button>
           </span>
         </div>
-        <div className="cursor-pointer ml-4 px-6 py-3 font-bold text-white rounded-full flex items-center justify-center transition-all duration-500 ease-in-out bg-gradient-to-r from-gray-500 to-black shadow-lg hover:shadow-blue-400 transform hover:scale-105">
-          <a href="/AbubakarSiddikZisan.png" download="AbubakarSiddikZisan.png">
-            <button>Resume</button>
-          </a>
 
-          <span className="pl-2">
-            <FaDownload />
-          </span>
-        </div>
+        <a href="/AbubakarSiddikZisan.png" download="AbubakarSiddikZisan.png">
+          <div className="cursor-pointer ml-4 px-6 py-3 font-bold text-white rounded-full flex items-center justify-center transition-all duration-500 ease-in-out bg-gradient-to-r from-gray-500 to-black shadow-lg hover:shadow-blue-400 transform hover:scale-105">
+            <button className="flex cursor-pointer">
+              Resume
+              <span className="pl-2">
+                <FaDownload />
+              </span>
+            </button>
+          </div>
+        </a>
       </div>
 
       {/* Desktop Menu */}
@@ -69,8 +73,13 @@ export default function Navbar() {
           </a>
         </li>
         <li className="hover:text-purple-600 transition">
-          <a className=" border-b-3 border-b-fuchsia-600" href="#">
+          <a className=" border-b-3 border-b-fuchsia-600" href="/project">
             Portfolio
+          </a>
+        </li>
+        <li className="hover:text-purple-600 transition">
+          <a className=" border-b-3 border-b-fuchsia-600" href="/blog">
+            Blog
           </a>
         </li>
       </ul>
@@ -114,14 +123,17 @@ export default function Navbar() {
             <Moon size={20} className="text-gray-300" />
           )}
         </button>
-        <button onClick={() => setIsOpen(!isOpen)} className="md:hidden">
+        <button
+          onClick={() => setIsOpen(!isOpen)}
+          className="md:hidden text-green-400"
+        >
           {isOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
       </div>
 
       {/* Mobile Menu */}
       {isOpen && (
-        <ul className="z-50 absolute top-16 right-7 md:hidden flex flex-col items-center space-y-3 py-6 text-lg font-medium">
+        <ul className="z-50 absolute top-16 right-7 md:hidden flex flex-col items-center space-y-3 py-6 text-lg font-medium text-green-400">
           <li className="hover:text-purple-600 transition">
             <a href="/">Home</a>
           </li>
@@ -132,7 +144,10 @@ export default function Navbar() {
             <a href="/Myservice">Service</a>
           </li>
           <li className="hover:text-purple-600 transition">
-            <a href="#">Portfolio</a>
+            <a href="/blog">Blog</a>
+          </li>
+          <li className="hover:text-purple-600 transition">
+            <a href="/project">Portfolio</a>
           </li>
           <li className="flex">
             <a

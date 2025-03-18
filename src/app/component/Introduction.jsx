@@ -45,7 +45,7 @@ export default function Hero() {
       <div className="container mx-auto px-6 lg:px-20 z-10 mt-[-15px] md:mt-[-70px]">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-6 items-center  ">
           {/* Left Side - Text Section */}
-          <div className="text-center md:text-left  order-2 md:order-1 overflow-hidden ">
+          <div className="text-center md:text-left  order-2 md:order-1  ">
             <p className="text-white text-xl md:text-2xl font-medium">I'm</p>
             <h2 className="text-2xl md:text-4xl font-bold uppercase text-amber-400">
               Abubakar Siddik Zisan
@@ -62,14 +62,15 @@ export default function Hero() {
             </p>
 
             {/* Buttons */}
-            <div className="mt-1 md:mt-6 flex flex-wrap justify-center md:justify-start gap-4">
+            <div className="mt-1 md:mt-9 flex flex-wrap justify-center md:justify-start gap-6">
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-purple-600 text-white px-2 md:px-6 py-1 md:py-3 rounded-lg font-semibold shadow-lg hover:bg-purple-700 transition"
+                className="bg-purple-600 text-white px-2 md:px-6 py-1  md:py-3 rounded-lg font-semibold shadow-lg hover:bg-purple-700 transition"
               >
-                My Projects →
+                <a href="/project">My Projects →</a>
               </motion.button>
+
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
