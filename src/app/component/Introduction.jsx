@@ -51,10 +51,7 @@ export default function Hero() {
               Abubakar Siddik Zisan
             </h2>
             <h1 className="text-2xl md:text-4xl font-extrabold leading-tight mt-2 text-green-400">
-              A{" "}
-              <span className="text-cyan-500 drop-shadow-md">
-                Front-end Developer
-              </span>{" "}
+              A <span className="text-cyan-500 drop-shadow-md">Front-end</span>{" "}
               <br />
               Web Developer.
             </h1>
