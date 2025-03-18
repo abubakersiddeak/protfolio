@@ -94,7 +94,7 @@ export default function Navbar({ darkMode, setDarkMode }) {
           href="https://github.com/abubakersiddeak"
           className="lg:text-3xl hover:shadow-blue-400 hover:shadow-md"
         >
-          <FaGithub className="h-6 w-6" />
+          <FaGithub className="h-6 w-6 text-white" />
         </Link>
         <Link
           href="https://www.linkedin.com/in/abubaker-siddik-zisan/"
