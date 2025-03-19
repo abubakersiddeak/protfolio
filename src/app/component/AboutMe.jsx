@@ -128,7 +128,7 @@ const AboutMe = () => {
             {
               title: "Experience",
               items: [
-                "Bangladesh Police (2022 – 2024)",
+                "Bangladesh Police From - 2023",
                 "PIMS Operator | Chattogram Metropolitan Police",
               ],
               delay: 0.4,
