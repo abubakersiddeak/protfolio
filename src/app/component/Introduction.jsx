@@ -13,7 +13,7 @@ export default function Hero() {
       {/* Background Gradient Circle */}
       <div className="absolute top-30 left-0 w-72 h-72 bg-purple-300 opacity-30 rounded-full blur-3xl"></div>
       <div className="absolute bottom-30 right-0 w-72 h-72 bg-purple-400 opacity-30 rounded-full blur-3xl"></div>
-      <div className="absolute h-full right-7 lg:right-13 hidden md:flex">
+      <div className="absolute h-full right-7 lg:right-13 hidden md:flex z-50">
         <div className="flex flex-col gap-13 lg:gap-15 items-center justify-around ">
           <Link
             href="https://www.facebook.com/abubakar.siddeak/"
@@ -85,7 +85,7 @@ export default function Hero() {
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1, delay: 0.3 }}
-            className="relative flex justify-center  order-1 mt-[-17px] md:mt-0 "
+            className="relative flex justify-center  order-1 mt-[-17px] md:mt-20 "
           >
             {" "}
             <Image

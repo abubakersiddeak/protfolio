@@ -42,7 +42,7 @@ export default function Navbar({ darkMode, setDarkMode }) {
           </span>
         </div>
 
-        <a href="/AbubakarSiddikZisan.png" download="AbubakarSiddikZisan.png">
+        <a href="/resume.pdf" download="resume.pdf">
           <div className="cursor-pointer ml-4 px-6 py-3 font-bold text-white rounded-full flex items-center justify-center transition-all duration-500 ease-in-out bg-gradient-to-r from-gray-500 to-black shadow-lg hover:shadow-blue-400 transform hover:scale-105">
             <button className="flex cursor-pointer">
               Resume
@@ -149,11 +149,7 @@ export default function Navbar({ darkMode, setDarkMode }) {
             <a href="/project">Portfolio</a>
           </li>
           <li className="flex">
-            <a
-              href="/AbubakarSiddikZisan.png"
-              download="AbubakarSiddikZisan.png"
-              className="flex "
-            >
+            <a href="/resume.pdf" download="resume.pdf" className="flex ">
               <button> Resume</button>
               <FaDownload className="m-2" />
             </a>

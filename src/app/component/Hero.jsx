@@ -9,7 +9,7 @@ const Hero = ({ darkMode, setDarkMode }) => {
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 1 }}
-      className={`relative bg-[#111827] from-pink-300 to-yellow-400 rounded-2xl z-50 
+      className={`relative  bg-[#111827] from-pink-300 to-yellow-400 rounded-2xl z-50 
         h-[70vh] xl:h-[80vh] 2xl:h-[80vh] md:h-[70vh] grid grid-cols-6 grid-rows-6 
         overflow-hidden shadow-[0_0_20px_#00eaff] border border-cyan-500 
         ${darkMode ? "bg-gray-900 text-green-500" : "bg-transparent"}`}
