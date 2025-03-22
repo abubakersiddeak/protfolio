@@ -58,11 +58,11 @@ const AboutMe = () => {
 
             {/* Animated Description */}
             <p className="text-lg text-gray-300 leading-relaxed mt-6 font-medium tracking-wide">
-              I’m
+              I’m{" "}
               <span className="font-bold text-cyan-400 hover:text-purple-400 transition-all duration-300">
-                Abubakar Siddik Zisan
+                Abubakar Siddik Zisan,
               </span>{" "}
-              , a passionate{" "}
+              a passionate{" "}
               <span className="bg-gradient-to-r from-green-400 to-blue-500 text-transparent bg-clip-text font-bold">
                 Front-end Developer
               </span>{" "}
