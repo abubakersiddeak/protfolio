@@ -26,7 +26,7 @@ const services = [
 
 export default function Service() {
   return (
-    <div className=" py-12 px-6 md:px-16 bg-[#111827]">
+    <div className=" py-12 px-6 md:px-16 bg-[#111827] h-[100vh] justify-center items-center">
       <h2 className="text-center text-6xl font-bold text-green-400 mb-12">
         My Services
       </h2>

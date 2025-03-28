@@ -64,7 +64,7 @@ const Icon = () => {
   ];
 
   return (
-    <div className="relative z-20 p-8 rounded-2xl  border-b-cyan-500 shadow-[0_0_0px_#00eaff] backdrop-blur-lg">
+    <div className="relative z-20 p-8  border-b-cyan-500 shadow-[0_0_0px_#00eaff] backdrop-blur-lg bg-black  border  ">
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}

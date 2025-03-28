@@ -37,7 +37,7 @@ export default function Blog() {
   const [selectedPost, setSelectedPost] = useState(blogPosts[0]);
 
   return (
-    <section className="py-20 bg-gray-950 text-white relative overflow-hidden">
+    <section className="py-20 bg-gray-950 text-white relative overflow-hidden h-[100vh]">
       {/* Neon Glow Effect */}
       <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-500/10 blur-3xl opacity-40"></div>
 

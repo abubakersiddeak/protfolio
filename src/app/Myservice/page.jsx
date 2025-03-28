@@ -2,11 +2,7 @@ import React from "react";
 import Service from "../component/Service";
 
 const Page = () => {
-  return (
-    <div>
-      <Service />
-    </div>
-  );
+  return <Service />;
 };
 
 export default Page;

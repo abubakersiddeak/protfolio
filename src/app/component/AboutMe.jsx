@@ -71,7 +71,7 @@ const AboutMe = () => {
 
             {/* Skillset with Cyber Hover Effect */}
             <p className="text-lg text-gray-300 leading-relaxed mt-4 font-medium tracking-wide">
-              I specialize in
+              I have knowledge of
               <span className="text-cyan-400 font-semibold hover:text-green-400 transition-all duration-300">
                 {" "}
                 React

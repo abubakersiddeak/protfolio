@@ -9,10 +9,9 @@ import { FaInstagram } from "react-icons/fa";
 
 export default function Hero() {
   return (
-    <section className="relative col-span-full row-span-5 flex items-center justify-center  overflow-hidden   ">
+    <section className="relative col-span-full row-span-5 flex items-center justify-center  overflow-hidden ">
       {/* Background Gradient Circle */}
-      <div className="absolute top-30 left-0 w-72 h-72 bg-purple-300 opacity-30 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-30 right-0 w-72 h-72 bg-purple-400 opacity-30 rounded-full blur-3xl"></div>
+
       <div className="absolute h-full right-7 lg:right-13 hidden md:flex z-50">
         <div className="flex flex-col gap-13 lg:gap-15 items-center justify-around ">
           <Link
@@ -98,12 +97,12 @@ export default function Hero() {
             <motion.div
               animate={{ y: [0, -5, 0] }}
               transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
-              className="absolute -top-2 left-1/2 transform -translate-x-1/2 w-6 h-6 bg-cyan-400 rounded-full shadow-[0px_0px_20px_cyan]"
+              className="absolute -top-2 left-1/2 transform -translate-x-1/2 w-6 h-6 bg-cyan-400 rounded-full shadow-[0px_0px_20px_cyan] md:block hidden"
             ></motion.div>
             <motion.div
               animate={{ y: [0, 5, 0] }}
               transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
-              className="absolute -bottom-2 left-1/3 w-4 h-4 bg-purple-500 rounded-full shadow-[0px_0px_15px_purple]"
+              className="absolute -bottom-2 left-1/3 w-4 h-4 bg-purple-500 rounded-full shadow-[0px_0px_15px_purple] md:block hidden"
             ></motion.div>
             {/* Floating Neon Particles */}
             <div className="absolute top-4 left-4 w-2 h-2 bg-cyan-400 rounded-full shadow-[0px_0px_10px_cyan] animate-ping"></div>

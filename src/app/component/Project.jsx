@@ -27,7 +27,7 @@ const projects = [
 
 export default function Project() {
   return (
-    <section className="py-16 bg-gray-900 text-white ">
+    <section className="py-16 bg-gray-900 text-white h-[100vh]">
       <div className="container mx-auto px-6 text-center">
         <h2 className="text-6xl font-bold mb-8 text-green-500">My Projects</h2>
         <div className="grid md:grid-cols-3 gap-14">
