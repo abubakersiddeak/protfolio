@@ -31,11 +31,11 @@ export default function Navbar({ darkMode, setDarkMode }) {
       {/* Logo */}
 
       <div className="hidden   relative md:flex items-center justify-center ">
-        <div className=" p-3  hidden lg:block rounded-3xl bg-white/5 backdrop-blur-2xl shadow-[0px_0px_20px_rgba(0,255,255,0.4)]   pr-0 border border-cyan-400 ">
+        <div className=" p-3  hidden lg:block rounded-3xl bg-transparent backdrop-blur-2xl hover:text-green-400 hover:shadow-blue-400 hover:shadow-md pr-0  ">
           <span className="text-xs sm:text-sm bg-gradient-to-r from-pink-300 to-yellow-400 text-transparent bg-clip-text">
             abubakersiddeak@gmail.com{" "}
           </span>
-          <span className="cursor-pointer  hover:bg-gray-400 p-3 rounded-3xl bg-white font-bold pl-4 pr-4 ml-2 text-xs sm:text-sm hover:shadow-blue-400 hover:shadow-md">
+          <span className="cursor-pointer  p-3 rounded-3xl font-bold pl-4 pr-4 ml-2 text-xs sm:text-sm hover:shadow-blue-400 hover:shadow-md">
             <button className="cursor-pointer" onClick={handleCopy}>
               {copied ? "Copied!" : "Copy"}
             </button>
@@ -43,7 +43,7 @@ export default function Navbar({ darkMode, setDarkMode }) {
         </div>
 
         <a href="/resume.pdf" download="resume.pdf">
-          <div className="cursor-pointer border border-cyan-400 ml-4 px-6 py-3 font-bold text-white rounded-full flex items-center justify-center transition-all duration-500 ease-in-out bg-gradient-to-r from-gray-500 to-black shadow-lg hover:shadow-blue-400 transform hover:scale-105">
+          <div className="cursor-pointer   ml-4 px-6 py-3 font-bold text-green-400 rounded-2xl flex items-center justify-center transition-all duration-500 ease-in-out shadow-lg hover:shadow-blue-400 transform hover:scale-105">
             <button className="flex cursor-pointer">
               Resume
               <span className="pl-2">

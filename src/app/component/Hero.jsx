@@ -11,7 +11,7 @@ const Hero = ({ darkMode, setDarkMode }) => {
       transition={{ duration: 1 }}
       className={`relative  bg-[#111827] from-pink-300 to-yellow-400 rounded-2xl z-50 
         h-[80vh] xl:h-[80vh] 2xl:h-[80vh] md:h-[70vh] grid grid-cols-6 grid-rows-6 
-        overflow-hidden shadow-[0_0_20px_#00eaff] border border-cyan-500 
+        overflow-hidden 
         ${darkMode ? "bg-gray-900 text-green-500" : "bg-transparent"}`}
     >
       <div className="absolute top-70 left-0 w-72 h-72 bg-purple-300 opacity-30 rounded-full blur-3xl"></div>

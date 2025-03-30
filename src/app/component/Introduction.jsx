@@ -41,26 +41,26 @@ export default function Hero() {
         </div>
       </div>
       {/* content ariya start */}
-      <div className="container mx-auto px-6 lg:px-20 z-10 mt-[-15px] md:mt-[-70px]">
+      <div className="container mx-auto px-6 lg:px-20 z-10 mt-[-15px] md:mt-[-20px]">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-6 items-center  ">
           {/* Left Side - Text Section */}
           <div className="text-center md:text-left  order-2 md:order-1  ">
             <p className="text-white text-xl md:text-2xl font-medium">I'm</p>
-            <h2 className="text-2xl md:text-4xl font-bold uppercase text-amber-400">
+            <h2 className="text-2xl md:text-2xl 2xl:text-4xl font-bold uppercase text-amber-400">
               Abubakar Siddik Zisan
             </h2>
-            <h1 className="text-2xl md:text-4xl font-extrabold leading-tight mt-2 text-green-400">
+            <h1 className="text-2xl md:text-3xl  2xl:text-4xl font-extrabold leading-tight mt-2 text-green-400">
               A <span className="text-cyan-500 drop-shadow-md">Front-end</span>{" "}
               <br />
               Web Developer.
             </h1>
-            <p className="bg-gradient-to-r from-pink-300 to-yellow-400 text-transparent bg-clip-text mt-1 md:mt-4 text-xs md:text-lg">
+            <p className="bg-gradient-to-r from-pink-300 to-yellow-400 text-transparent bg-clip-text mt-1 md:mt-2 2xl:mt-4 text-xs md:text-lg">
               I create pixel-perfect, responsive, and high-performing web
               applications with modern technologies.
             </p>
 
             {/* Buttons */}
-            <div className="mt-1 md:mt-9 flex flex-wrap justify-center md:justify-start gap-6">
+            <div className="mt-1 md:mt-4 2xl:mt-9 flex flex-wrap justify-center md:justify-start gap-6">
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -84,7 +84,7 @@ export default function Hero() {
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1, delay: 0.3 }}
-            className="relative flex justify-center  order-1 mt-[-17px] md:mt-20 "
+            className="relative flex justify-center  order-1 mt-[-17px] md:mt-5 "
           >
             {" "}
             <Image
