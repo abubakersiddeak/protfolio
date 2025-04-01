@@ -1,6 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Navbar from "./Navbar";
 
 const projects = [
   {
@@ -27,33 +28,40 @@ const projects = [
 
 export default function Project() {
   return (
-    <section className="py-16 bg-gray-900 text-white h-[100vh]">
-      <div className="container mx-auto px-6 text-center">
-        <h2 className="text-6xl font-bold mb-8 text-green-500">My Projects</h2>
-        <div className="grid md:grid-cols-3 gap-14">
-          {projects.map((project, index) => (
-            <a href={project.link} key={index}>
-              {" "}
-              <motion.div
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className=" p-6 rounded-2xl border bg-white/5 backdrop-blur-2xl shadow-[0px_0px_20px_rgba(0,255,255,0.4)] border-cyan-400/30 transition duration-500 hover:shadow-[0px_0px_30px_rgba(0,255,255,0.7)] hover:bg-white/10  "
-              >
-                <div className="relative w-full h-40 mb-4 rounded-xl overflow-hidden">
-                  <Image
-                    src={project.image}
-                    alt={project.title}
-                    layout="fill"
-                    objectFit="cover"
-                  />
-                </div>
-                <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
-                <p className="text-gray-400">{project.description}</p>
-              </motion.div>
-            </a>
-          ))}
+    <div>
+      <Navbar />
+      <section className="py-16 bg-gray-900 text-white dark:bg-black min-h-[100vh]">
+        <div className="container mx-auto px-6 text-center">
+          <h2 className="text-6xl font-bold mb-8 text-green-500">
+            My Projects
+          </h2>
+          <div className="grid md:grid-cols-3 gap-14">
+            {projects.map((project, index) => (
+              <a href={project.link} key={index}>
+                {" "}
+                <motion.div
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className=" p-6 rounded-2xl border bg-white/5 backdrop-blur-2xl shadow-[0px_0px_20px_rgba(0,255,255,0.4)] border-cyan-400/30 transition duration-500 hover:shadow-[0px_0px_30px_rgba(0,255,255,0.7)] hover:bg-white/10  "
+                >
+                  <div className="relative w-full h-40 mb-4 rounded-xl overflow-hidden">
+                    <Image
+                      src={project.image}
+                      alt={project.title}
+                      layout="fill"
+                      objectFit="cover"
+                    />
+                  </div>
+                  <h3 className="text-xl font-semibold mb-2">
+                    {project.title}
+                  </h3>
+                  <p className="text-gray-400">{project.description}</p>
+                </motion.div>
+              </a>
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
   );
 }

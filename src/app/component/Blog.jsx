@@ -2,6 +2,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { useState } from "react";
+import Navbar from "./Navbar";
 
 const blogPosts = [
   {
@@ -37,11 +38,11 @@ export default function Blog() {
   const [selectedPost, setSelectedPost] = useState(blogPosts[0]);
 
   return (
-    <section className="py-20 bg-gray-950 text-white relative overflow-hidden h-[100vh]">
+    <section className=" bg-gray-950 dark:bg-black text-white relative overflow-hidden h-[100vh]">
       {/* Neon Glow Effect */}
       <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-500/10 blur-3xl opacity-40"></div>
-
-      <div className="container mx-auto px-6 relative z-10 grid md:grid-cols-3 gap-12">
+      <Navbar className="mt-0" />
+      <div className="container mx-auto px-6 relative z-10 grid md:grid-cols-3 gap-12 mt-7">
         {/* Left - Blog List */}
         <div className="md:col-span-1 space-y-6">
           <h2 className="text-5xl font-extrabold text-green-400 tracking-wide mb-6">

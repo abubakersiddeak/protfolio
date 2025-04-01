@@ -8,8 +8,9 @@ import { FaGithub } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import Link from "next/link";
+import ThemeButton from "./ThemeButton";
 
-export default function Navbar({ darkMode, setDarkMode }) {
+export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [copied, setCopied] = useState(false);
 
@@ -23,11 +24,7 @@ export default function Navbar({ darkMode, setDarkMode }) {
   };
 
   return (
-    <nav
-      className={`w-full py-4 px-6 md:px-10 flex  items-center justify-between  relative ${
-        darkMode ? "bg-gray-900 text-green-500" : "bg-transparent"
-      }`}
-    >
+    <nav className="w-full py-4 px-6 md:px-10 flex  items-center justify-between  relative bg-gray-900 text-green-500 dark:bg-black">
       {/* Logo */}
 
       <div className="hidden   relative md:flex items-center justify-center ">
@@ -112,16 +109,7 @@ export default function Navbar({ darkMode, setDarkMode }) {
       {/* icon end */}
       {/* Dark Mode & Mobile Menu Button */}
       <div className="flex items-center space-x-3 ">
-        <button
-          onClick={() => setDarkMode(!darkMode)}
-          className="p-2 rounded-lg "
-        >
-          {darkMode ? (
-            <Moon size={20} className="text-gray-300" />
-          ) : (
-            <Sun size={20} className="text-amber-300" />
-          )}
-        </button>
+        <ThemeButton />
         <button
           onClick={() => setIsOpen(!isOpen)}
           className="md:hidden text-green-400"

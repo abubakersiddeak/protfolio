@@ -1,11 +1,10 @@
 import { FaFacebook, FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 
-export default function Footer({ darkMode }) {
+export default function Footer() {
   return (
     <footer
-      className={`relative text-white py-6 overflow-hidden rounded-t-xl  ${
-        darkMode ? "bg-gray-700" : "bg-black"
-      }`}
+      className={`relative text-white py-6 overflow-hidden rounded-t-xl bg-gray-700  dark:bg-gray-950
+      `}
     >
       {/* Neon Glow Effect */}
       <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-purple-500/10 blur-3xl opacity-30"></div>
