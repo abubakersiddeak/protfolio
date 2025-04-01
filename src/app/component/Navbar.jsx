@@ -2,18 +2,18 @@
 import { useState } from "react";
 import { Sun, Moon, Menu, X } from "lucide-react";
 import { FaDownload } from "react-icons/fa6";
-
+import { usePathname } from "next/navigation";
 import { LuFacebook } from "react-icons/lu";
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import Link from "next/link";
 import ThemeButton from "./ThemeButton";
-
+import clsx from "clsx";
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [copied, setCopied] = useState(false);
-
+  const pathname = usePathname();
   const email = "abubakersiddeak@gmail.com";
   const handleCopy = (e) => {
     e.preventDefault();
@@ -22,7 +22,7 @@ export default function Navbar() {
     setTimeout(() => setCopied(false), 2000);
     console.log("coppy");
   };
-
+  console.log(pathname);
   return (
     <nav className="w-full py-4 px-6 md:px-10 flex  items-center justify-between  relative bg-gray-900 text-green-500 dark:bg-black">
       {/* Logo */}
@@ -54,29 +54,73 @@ export default function Navbar() {
       {/* Desktop Menu */}
       <ul className="hidden md:flex space-x-9 font-medium bg-gradient-to-r from-pink-300 to-yellow-400 text-transparent bg-clip-text">
         <li className="hover:text-purple-600 transition">
-          <a className=" border-b-3 border-b-cyan-500" href="/">
+          <Link
+            className={clsx(
+              "transition", // Smooth transition
+              {
+                "border-b-[3px] border-b-cyan-500 text-green": pathname === "/",
+              }
+            )}
+            href="/"
+          >
             Home
-          </a>
+          </Link>
         </li>
         <li className="hover:text-purple-600 transition">
-          <a className=" border-b-3 border-b-cyan-500" href="/about">
+          <Link
+            className={clsx(
+              "transition", // Smooth transition
+              {
+                "border-b-[3px] border-b-cyan-500 text-green":
+                  pathname === "/about",
+              }
+            )}
+            href="/about"
+          >
             About
-          </a>
+          </Link>
         </li>
         <li className="hover:text-purple-600 transition">
-          <a className=" border-b-3 border-b-cyan-500" href="/Myservice">
+          <Link
+            className={clsx(
+              "transition", // Smooth transition
+              {
+                "border-b-[3px] border-b-cyan-500 text-green":
+                  pathname === "/Myservice",
+              }
+            )}
+            href="/Myservice"
+          >
             Service
-          </a>
+          </Link>
         </li>
         <li className="hover:text-purple-600 transition">
-          <a className=" border-b-3 border-b-cyan-500" href="/project">
-            Portfolio
-          </a>
+          <Link
+            className={clsx(
+              "transition", // Smooth transition
+              {
+                "border-b-[3px] border-b-cyan-500 text-green":
+                  pathname === "/project",
+              }
+            )}
+            href="/project"
+          >
+            Porject
+          </Link>
         </li>
         <li className="hover:text-purple-600 transition">
-          <a className=" border-b-3 border-b-cyan-500" href="/blog">
+          <Link
+            className={clsx(
+              "transition", // Smooth transition
+              {
+                "border-b-[3px] border-b-cyan-500 text-green":
+                  pathname === "/blog",
+              }
+            )}
+            href="/blog"
+          >
             Blog
-          </a>
+          </Link>
         </li>
       </ul>
       {/* icon  start */}
@@ -120,26 +164,71 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <ul className="z-50 absolute top-16 right-7 md:hidden flex flex-col items-center space-y-3 py-6 text-lg font-medium text-green-400 p-2 rounded-3xl bg-gray-600">
-          <li className="hover:text-purple-600 transition">
+        <ul className="z-50 absolute top-16 right-7 md:hidden flex flex-col items-center space-y-4 p-5 bg-gray-800/80 backdrop-blur-lg rounded-3xl border border-gray-700 shadow-lg text-lg font-medium text-green-300 transition-all duration-300">
+          <li
+            className={clsx(
+              "relative px-6 py-2 hover:text-purple-500 transition-all duration-300 hover:scale-105",
+              {
+                "text-sky-500 font-extrabold after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:w-10 after:h-[2px] after:bg-sky-500 after:rounded-full after:-translate-x-1/2":
+                  pathname === "/",
+              }
+            )}
+          >
             <a href="/">Home</a>
           </li>
-          <li className="hover:text-purple-600 transition">
+          <li
+            className={clsx(
+              "relative px-6 py-2 hover:text-purple-500 transition-all duration-300 hover:scale-105",
+              {
+                "text-sky-500 font-extrabold after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:w-10 after:h-[2px] after:bg-sky-500 after:rounded-full after:-translate-x-1/2":
+                  pathname === "/about",
+              }
+            )}
+          >
             <a href="/about">About</a>
           </li>
-          <li className="hover:text-purple-600 transition">
+          <li
+            className={clsx(
+              "relative px-6 py-2 hover:text-purple-500 transition-all duration-300 hover:scale-105",
+              {
+                "text-sky-500 font-extrabold after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:w-10 after:h-[2px] after:bg-sky-500 after:rounded-full after:-translate-x-1/2":
+                  pathname === "/Myservice",
+              }
+            )}
+          >
             <a href="/Myservice">Service</a>
           </li>
-          <li className="hover:text-purple-600 transition">
-            <a href="/blog">Blog</a>
-          </li>
-          <li className="hover:text-purple-600 transition">
+          <li
+            className={clsx(
+              "relative px-6 py-2 hover:text-purple-500 transition-all duration-300 hover:scale-105",
+              {
+                "text-sky-500 font-extrabold after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:w-10 after:h-[2px] after:bg-sky-500 after:rounded-full after:-translate-x-1/2":
+                  pathname === "/project",
+              }
+            )}
+          >
             <a href="/project">Portfolio</a>
           </li>
-          <li className="flex">
-            <a href="/resume.pdf" download="resume.pdf" className="flex ">
-              <button> Resume</button>
-              <FaDownload className="m-2" />
+          <li
+            className={clsx(
+              "relative px-6 py-2 hover:text-purple-500 transition-all duration-300 hover:scale-105",
+              {
+                "text-sky-500 font-extrabold after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:w-10 after:h-[2px] after:bg-sky-500 after:rounded-full after:-translate-x-1/2":
+                  pathname === "/blog",
+              }
+            )}
+          >
+            <a href="/blog">Blog</a>
+          </li>
+
+          <li>
+            <a
+              href="/resume.pdf"
+              download="resume.pdf"
+              className="flex items-center space-x-2 px-5 py-2 text-white bg-gradient-to-r from-green-400 to-blue-500 rounded-lg shadow-md hover:shadow-green-400/50 hover:scale-105 transition-all duration-300"
+            >
+              <span>Resume</span>
+              <FaDownload className="animate-bounce duration-500" />
             </a>
           </li>
         </ul>

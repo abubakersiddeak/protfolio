@@ -43,7 +43,7 @@ const SkillProgress = ({ percentage, colors, icon }) => {
       {/* Skill Name & Percentage */}
       <div className="absolute inset-0 flex flex-col items-center justify-center">
         {icon}
-        <span className="mt-1 text-[3px] sm:text-[5px] md:text-[8px] 2xl:text-[10px] text-white">
+        <span className="mt-[1/2] md:mt-1 text-[2px] sm:text-[5px] md:text-[8px] 2xl:text-[10px] text-white">
           {percentage} %
         </span>
       </div>

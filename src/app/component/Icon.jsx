@@ -69,7 +69,7 @@ const Icon = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 2 }}
-        className="flex flex-wrap justify-center gap-1 md:gap-2 lg:gap-3 xl:gap-8 2xl:gap-10"
+        className="flex flex-wrap justify-center gap-2 md:gap-2 lg:gap-3 xl:gap-8 2xl:gap-10"
       >
         {skills.map((skill, index) => (
           <motion.div
