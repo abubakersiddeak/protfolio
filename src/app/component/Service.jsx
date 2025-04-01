@@ -29,7 +29,7 @@ export default function Service() {
   return (
     <div>
       <Navbar />
-      <div className="py-12 px-4 sm:px-6 md:px-12 lg:px-16 bg-[#111827] dark:bg-black flex flex-col items-center">
+      <div className="py-12 px-4 sm:px-6 md:px-12 lg:px-16 bg-[#111827] dark:bg-black flex flex-col items-center min-h-[100vh]">
         <h2 className="text-center text-4xl sm:text-5xl md:text-6xl font-bold text-green-400 mb-8 sm:mb-12">
           My Services
         </h2>

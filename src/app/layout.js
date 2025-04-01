@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="p-2 bg-slate-200">{children}</body>
+      <body className="p-2 bg-slate-200 rounded-xl">{children}</body>
     </html>
   );
 }

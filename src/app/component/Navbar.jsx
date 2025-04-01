@@ -24,7 +24,7 @@ export default function Navbar() {
   };
   console.log(pathname);
   return (
-    <nav className="w-full py-4 px-6 md:px-10 flex  items-center justify-between  relative bg-gray-900 text-green-500 dark:bg-black">
+    <nav className=" rounded-t-2xl w-full py-4 px-6 md:px-10 flex  items-center justify-between  relative bg-gray-900 text-green-500 dark:bg-black">
       {/* Logo */}
 
       <div className="hidden   relative md:flex items-center justify-center ">

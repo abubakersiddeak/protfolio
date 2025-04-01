@@ -3,7 +3,7 @@ import { FaFacebook, FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 export default function Footer() {
   return (
     <footer
-      className={`relative text-white py-6 overflow-hidden rounded-t-xl bg-gray-700  dark:bg-gray-950
+      className={`relative text-white py-6 overflow-hidden rounded-xl bg-gray-700  dark:bg-gray-950
       `}
     >
       {/* Neon Glow Effect */}

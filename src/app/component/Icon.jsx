@@ -8,7 +8,8 @@ import { SiMongodb, SiAdobephotoshop, SiGimp } from "react-icons/si";
 import SkillProgress from "./SkillProgress";
 
 const Icon = () => {
-  const style = "w-1 h-1 md:w-4 md:h-4 drop-shadow-[0_0_10px_#00eaff]";
+  const style =
+    "w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 lg:w-8 lg:h-8 drop-shadow-[0_0_10px_#00eaff]";
 
   const skills = [
     {
@@ -64,17 +65,17 @@ const Icon = () => {
   ];
 
   return (
-    <div className="relative z-20 p-4  shadow-[0_0_0px_#00eaff] backdrop-blur-lg bg-black ">
+    <div className="relative z-20 p-4 backdrop-blur-lg bg-black ">
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 2 }}
-        className="flex flex-wrap justify-center gap-2 md:gap-2 lg:gap-3 xl:gap-8 2xl:gap-10"
+        className="flex flex-wrap justify-center gap-3 sm:gap-4 md:gap-6 lg:gap-8"
       >
         {skills.map((skill, index) => (
           <motion.div
             key={index}
-            className="bg-black border border-cyan-500 rounded-xl flex flex-col items-center justify-center hover:scale-110 transition-all duration-300 hover:shadow-[0_0_30px_#00eaff] h-6 w-6 md:h-10 md:w-10 lg:h-14 lg:w-14"
+            className="bg-black border border-cyan-500 rounded-xl flex flex-col items-center justify-center hover:scale-110 transition-all duration-300 hover:shadow-[0_0_30px_#00eaff] h-12 w-12 sm:h-14 sm:w-14 md:h-16 md:w-16 lg:h-20 lg:w-20"
           >
             <SkillProgress
               percentage={skill.percentage}

@@ -3,7 +3,7 @@ import AboutMe from "../component/AboutMe";
 
 const Page = () => {
   return (
-    <div>
+    <div className="rounded-2xl">
       <AboutMe />
     </div>
   );

@@ -6,9 +6,9 @@ import Navbar from "./Navbar";
 
 const AboutMe = () => {
   return (
-    <div className="relative min-h-screen bg-[#111827] text-[#E2E8F0]  ">
+    <div className="relative min-h-screen bg-[#111827] text-[#E2E8F0] rounded-2xl dark:bg-black ">
       {/* Background Overlay */}
-      <div className="absolute inset-0 bg-black/30 backdrop-blur-[3px] rounded-b-[20px] md:rounded-b-[80px] dark:bg-black"></div>
+      <div className="absolute inset-0 bg-black/30 backdrop-blur-[3px] rounded-3xl"></div>
       <Navbar />
       {/* About Content */}
       <section className="relative py-10 md:py-20 px-4 sm:px-6 max-w-6xl mx-auto text-white">
