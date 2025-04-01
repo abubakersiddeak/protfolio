@@ -30,7 +30,7 @@ export default function Project() {
   return (
     <div>
       <Navbar />
-      <section className="py-16 bg-gray-900 text-white dark:bg-black min-h-[100vh]">
+      <section className="py-16 bg-gray-900 text-white dark:bg-black min-h-[100vh] rounded-b-2xl">
         <div className="container mx-auto px-6 text-center">
           <h2 className="text-6xl font-bold mb-8 text-green-500">
             My Projects

@@ -9,7 +9,7 @@ const Hero = () => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 1 }}
       className="relative 
-        h-[65vh] md:h-[70vh] xl:h-[70vh] 2xl:h-[70vh] grid grid-cols-6 grid-rows-6 
+        h-[65vh] md:h-[70vh] xl:h-[70vh] 2xl:h-[70vh] grid grid-cols-6 grid-rows-6 rounded-b-2xl
         overflow-hidden bg-gradient-to-r from-gray-900 via-black to-gray-900 dark:bg-black"
     >
       <div className="absolute top-70 left-0 w-72 h-72 bg-purple-300 opacity-30 rounded-full blur-3xl"></div>
