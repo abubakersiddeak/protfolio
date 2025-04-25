@@ -5,18 +5,18 @@ import Navbar from "./Navbar";
 
 const projects = [
   {
-    title: "AI Chatbot",
+    title: "Online Exam Platform",
     description:
-      "An AI-powered chatbot that provides smart responses and automation.",
-    image: "/download.jpeg",
-    link: "#",
+      "A web-based system that allows students to take tests and view their results.",
+    image: "/Screenshot from 2025-04-25 16-16-17.png",
+    link: "https://online-exam-nine.vercel.app/",
   },
   {
-    title: "Cyber Security Dashboard",
+    title: "E-commerce website frontend",
     description:
-      "A futuristic security dashboard with real-time threat analysis.",
-    image: "/images.png",
-    link: "#",
+      "An e-commerce website for a sports shop where customers can browse and purchase sports products.",
+    image: "/Screenshot from 2025-04-25 16-30-10.png",
+    link: "https://weal-shop2024.vercel.app/",
   },
   {
     title: "3D Portfolio",
