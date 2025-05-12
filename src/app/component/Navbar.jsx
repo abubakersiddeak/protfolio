@@ -105,7 +105,7 @@ export default function Navbar() {
             )}
             href="/project"
           >
-            Porject
+            Porjects
           </Link>
         </li>
         <li className="hover:text-purple-600 transition">
@@ -207,7 +207,7 @@ export default function Navbar() {
               }
             )}
           >
-            <a href="/project">Portfolio</a>
+            <a href="/project">Porjects</a>
           </li>
           <li
             className={clsx(
