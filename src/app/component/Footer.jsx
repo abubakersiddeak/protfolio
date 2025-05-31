@@ -24,7 +24,7 @@ export default function Footer() {
             <a href="/Myservice">Service</a>
           </li>
           <li className="hover:text-purple-600 transition">
-            <a href="/project">Portfolio</a>
+            <a href="/project">Projects</a>
           </li>
           <li className="hover:text-purple-600 transition">
             <a href="/blog">Blog</a>
